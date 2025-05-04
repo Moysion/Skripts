@@ -1,0 +1,170 @@
+command /skillrandom:
+    trigger: 
+        if player has permission "sprandom.sk":
+            set {rsp::%uuid of player%} to a random integer between 1 and 100000
+            add {rsp::%uuid of player%} to {skills::%uuid of player%}
+            set {rsp::%uuid of player%} to 0
+            stop
+        else:
+            send "&cUnkown Command" to player
+
+on right click:
+    if name of player's tool contains "&cSkill Point Voucher":
+        if lore of player's tool contains "&7Use this voucher to get a random amount of", and "&7skill points between 1-100":
+            set {rsp::%uuid of player%} to a random integer between 1 and 100
+            add {rsp::%uuid of player%} to {skills::%uuid of player%}
+            set {rsp::%uuid of player%} to 0
+            remove 1 of player's tool from player's tool
+            stop
+        if lore of player's tool contains "&7Use this voucher to get a random amount of", and "&7skill points between 1-1000":
+            set {rsp::%uuid of player%} to a random integer between 1 and 1000
+            add {rsp::%uuid of player%} to {skills::%uuid of player%}
+            set {rsp::%uuid of player%} to 0
+            remove 1 of player's tool from player's tool
+            stop
+        if lore of player's tool contains "&7Use this voucher to get a random amount of", and "&7skill points between 1-10000":
+            set {rsp::%uuid of player%} to a random integer between 1 and 10000
+            add {rsp::%uuid of player%} to {skills::%uuid of player%}
+            set {rsp::%uuid of player%} to 0
+            remove 1 of player's tool from player's tool
+            stop
+        if lore of player's tool contains "&7Use this voucher to get a random amount of", and "&7skill points between 1-100000":
+            set {rsp::%uuid of player%} to a random integer between 1 and 100000
+            add {rsp::%uuid of player%} to {skills::%uuid of player%}
+            set {rsp::%uuid of player%} to 0
+            remove 1 of player's tool from player's tool
+            stop
+        if lore of player's tool contains "&7Use this voucher to get a random amount of", and "&7skill points between 50-200":
+            set {rsp::%uuid of player%} to a random integer between 50 and 200
+            add {rsp::%uuid of player%} to {skills::%uuid of player%}
+            set {rsp::%uuid of player%} to 0
+            remove 1 of player's tool from player's tool
+            stop
+        if lore of player's tool contains "&7Use this voucher to get a random amount of", and "&7skill points between 100-300":
+            set {rsp::%uuid of player%} to a random integer between 100 and 300
+            add {rsp::%uuid of player%} to {skills::%uuid of player%}
+            set {rsp::%uuid of player%} to 0
+            remove 1 of player's tool from player's tool
+            stop
+        if lore of player's tool contains "&7Use this voucher to get a random amount of", and "&7skill points between 1-100":
+            set {rsp::%uuid of player%} to a random integer between 200 and 400
+            add {rsp::%uuid of player%} to {skills::%uuid of player%}
+            set {rsp::%uuid of player%} to 0
+            remove 1 of player's tool from player's tool
+            stop
+        if lore of player's tool contains "&7Use this voucher to get a random amount of", and "&7skill points between 300-500":
+            set {rsp::%uuid of player%} to a random integer between 300 and 500
+            add {rsp::%uuid of player%} to {skills::%uuid of player%}
+            set {rsp::%uuid of player%} to 0
+            remove 1 of player's tool from player's tool
+            play sound "block.note_block.pling" at volume 100 at pitch 6 to player
+            stop
+        if lore of player's tool contains "&7Use this voucher for 100 skill points":
+            add 100 to {skills::%player's uuid%}
+            remove 1 of player's tool from player's tool
+            play sound "block.note_block.pling" at volume 100 at pitch 6 to player
+            stop
+        if lore of player's tool contains "&7Use this voucher for 200 skill points":
+            add 200 to {skills::%player's uuid%}
+            remove 1 of player's tool from player's tool
+            play sound "block.note_block.pling" at volume 100 at pitch 6 to player
+            stop
+        if lore of player's tool contains "&7Use this voucher for 300 skill points":
+            add 300 to {skills::%player's uuid%}
+            remove 1 of player's tool from player's tool
+            play sound "block.note_block.pling" at volume 100 at pitch 6 to player
+            stop
+        if lore of player's tool contains "&7Use this voucher for 400 skill points":
+            add 400 to {skills::%player's uuid%}
+            remove 1 of player's tool from player's tool
+            play sound "block.note_block.pling" at volume 100 at pitch 6 to player
+            stop
+        if lore of player's tool contains "&7Use this voucher for 500 skill points":
+            add 500 to {skills::%player's uuid%}
+            remove 1 of player's tool from player's tool
+            play sound "block.note_block.pling" at volume 100 at pitch 6 to player
+            stop
+        if lore of player's tool contains "&7Use this voucher for 600 skill points":
+            add 600 to {skills::%player's uuid%}
+            remove 1 of player's tool from player's tool
+            play sound "block.note_block.pling" at volume 100 at pitch 6 to player
+            stop
+        if lore of player's tool contains "&7Use this voucher for 700 skill points":
+            add 700 to {skills::%player's uuid%}
+            remove 1 of player's tool from player's tool
+            play sound "block.note_block.pling" at volume 100 at pitch 6 to player
+            stop
+        if lore of player's tool contains "&7Use this voucher for 800 skill points":
+            add 800 to {skills::%player's uuid%}
+            remove 1 of player's tool from player's tool
+            play sound "block.note_block.pling" at volume 100 at pitch 6 to player
+            stop
+        if lore of player's tool contains "&7Use this voucher for 900 skill points":
+            add 900 to {skills::%player's uuid%}
+            remove 1 of player's tool from player's tool
+            play sound "block.note_block.pling" at volume 100 at pitch 6 to player
+            stop
+        if lore of player's tool contains "&7Use this voucher for 1000 skill points":
+            add 1000 to {skills::%player's uuid%}
+            remove 1 of player's tool from player's tool
+            play sound "block.note_block.pling" at volume 100 at pitch 6 to player
+            stop
+        if lore of player's tool contains "&7Use this voucher for 2000 skill points":
+            add 2000 to {skills::%player's uuid%}
+            remove 1 of player's tool from player's tool
+            play sound "block.note_block.pling" at volume 100 at pitch 6 to player
+            stop
+        if lore of player's tool contains "&7Use this voucher for 3000 skill points":
+            add 3000 to {skills::%player's uuid%}
+            remove 1 of player's tool from player's tool
+            play sound "block.note_block.pling" at volume 100 at pitch 6 to player
+            stop
+        if lore of player's tool contains "&7Use this voucher for 4000 skill points":
+            add 4000 to {skills::%player's uuid%}
+            remove 1 of player's tool from player's tool
+            play sound "block.note_block.pling" at volume 100 at pitch 6 to player
+            stop
+        if lore of player's tool contains "&7Use this voucher for 5000 skill points":
+            add 5000 to {skills::%player's uuid%}
+            remove 1 of player's tool from player's tool
+            play sound "block.note_block.pling" at volume 100 at pitch 6 to player
+            stop
+        if lore of player's tool contains "&7Use this voucher for 6000 skill points":
+            add 6000 to {skills::%player's uuid%}
+            remove 1 of player's tool from player's tool
+            play sound "block.note_block.pling" at volume 100 at pitch 6 to player
+            stop
+        if lore of player's tool contains "&7Use this voucher for 7000 skill points":
+            add 7000 to {skills::%player's uuid%}
+            remove 1 of player's tool from player's tool
+            play sound "block.note_block.pling" at volume 100 at pitch 6 to player
+            stop
+        if lore of player's tool contains "&7Use this voucher for 8000 skill points":
+            add 8000 to {skills::%player's uuid%}
+            remove 1 of player's tool from player's tool
+            play sound "block.note_block.pling" at volume 100 at pitch 6 to player
+            stop
+        if lore of player's tool contains "&7Use this voucher for 9000 skill points":
+            add 9000 to {skills::%player's uuid%}
+            remove 1 of player's tool from player's tool
+			play sound "block.note_block.pling" at volume 100 at pitch 6 to player
+            stop
+        if lore of player's tool contains "&7Use this voucher for 10000 skill points":
+            add 10000 to {skills::%player's uuid%}
+            remove 1 of player's tool from player's tool
+            play sound "block.note_block.pling" at volume 100 at pitch 6 to player
+            stop
+
+command /voucher <text>:
+    permission: *
+    trigger:
+        if arg-1 is "100", "200", "300", "400", "500", "600", "700", "800", "900", "1000", "2000", "3000", "4000", "5000", "6000", "7000", "8000", "9000", or "10000":
+            set {_vsp} to arg 1
+            give player paper named "&cSkill Point Voucher" with lore "&7Use this voucher for %{_vsp}% skill points"
+            set {_vsp} to 0
+        else:
+            send "&cYou must use the numbers in the vouchers channel in the discord"
+
+command /testsound:
+	trigger:
+		play sound "block.note_block.pling" at volume 100 at pitch 6 to player

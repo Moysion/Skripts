@@ -1,0 +1,32 @@
+command /pv [<number>] [<offline player>]:
+	trigger:
+		arg-1 is not between 1 and 10:
+			send "&c[Vaults] &rYou may only use Va
+			stop
+		arg-2 is set:
+			player has permission "core.staff"
+			set {target} to arg-2
+		else:
+			set {target} to player
+		if {vault::status::%player%} is not set:
+			set metadata tag "vault%arg-1%" of player to chest inventory with 6 rows named "&4Vault %arg-1%"
+			loop {saveditems::%arg-1%::%uuid of {target}%::*}:
+				set slot (loop-index parsed as number) of metadata tag "vault%arg-1%" of player to loop-value
+			open (metadata tag "vault%arg-1%" of player) to player
+			set {vault::status::%player%} to arg-1
+			set {vault::target::%player%} to {target}
+		
+on inventory close:
+	{vault::status::%player%} is set:
+		wait 1 tick
+		set {vaultnum} to {vault::status::%player%}
+		set {target} to {vault::target::%player%}
+		delete {saveditems::%{vaultnum}%::%uuid of {target}%::*}
+		set {slot} to 0
+		loop 54 times:
+			set {item} to slot {slot} of metadata tag "vault%{vaultnum}%" of player
+			{item} is not air:
+				set {saveditems::%{vaultnum}%::%uuid of {target}%::%{slot}%} to {item}
+			add 1 to {slot}
+		delete {vault::status::%player%}
+		delete {vault::target::%player%}

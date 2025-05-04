@@ -1,0 +1,12 @@
+command /rows [<integer>]:
+	permission: *
+	trigger:
+		if arg-1 <= 6:
+			set {_rows} to a chest inventory with arg-1 rows named "&c%arg-1% Rows"
+			open {_rows} to player
+		if arg-1 > 6:
+			send "&cUse rows 1-6"
+			
+on inventory click:
+	if {_rowschecking} is true:
+		send "&c[DEBUG] &rYou just clicked the slot &a%index of event-slot%" to player

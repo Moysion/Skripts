@@ -1,0 +1,32 @@
+command /calc [<number>] [<text>] [<number>]:
+    trigger:
+        if arg-2 is "+":
+            set {_n1} to arg-1
+            set {_n2} to arg-3
+            set {_r} to ({_n1} + {_n2})
+            send "&8[&eCalculator&8] &7Result: %{_r}%"
+        else if arg-2 is "-":
+            set {_n1} to arg-1
+            set {_n2} to arg-3
+            set {_r} to ({_n1} - {_n2})
+            send "&8[&eCalculator&8] &7Result: %{_r}%"
+        else if arg-2 is "x":
+            set {_n1} to arg-1
+            set {_n2} to arg-3
+            set {_r} to ({_n1} * {_n2})
+            send "&8[&eCalculator&8] &7Result: %{_r}%"
+        else if arg-2 is "/":
+            set {_n1} to arg-1
+            set {_n2} to arg-3
+            set {_r} to ({_n1} / {_n2})
+            send "&8[&eCalculator&8] &7Result: %{_r}%"
+        else if arg-2 is "+":
+            set {_n1} to arg-1
+            set {_n2} to arg-3
+            set {_r} to ({_n1} + {_n2})
+            send "&8[&eCalculator&8] &7Result: %{_r}%"
+        else:
+            send "&8[&eCalculator&8] &7Correct usage ""1 + 1"""
+        	
+        
+
