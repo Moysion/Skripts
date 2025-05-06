@@ -1,0 +1,33 @@
+on first join:
+	broadcast "&8[&a&l+&r&8] &7%player% has joined for the &afirst &7time!"
+	set {_welcomed} to player
+	set {_welcometime} to true
+	wait 10 seconds
+	set {_welcometime} to false
+	
+on join:
+	broadcast "&8[&a&l+&r&8] &7%player% has joined the server!"
+	set {_welcomebd} to player
+	set {_welcomebtime} to true
+	wait 10 seconds
+	set {_welcomebtime} to false
+	
+command /welcome:
+	trigger:
+		if {_welcometime} is true:
+			make player send message "Welcome %{_welcomed}%"
+			send "&8[&a(server)&8] &7You have recieved (item)!" to player
+		if {_welcometime} is false:
+			send "&cNo one has joined yet!" to player
+		if {_welcometime} is not set:
+			send "&cNo one has joined yet!" to player
+		
+command /wb:
+	trigger:
+		if {_welcomebtime} is true:
+			make player send message "Welcome %{_welcomed}%"
+			send "&8[&a(server)&8] &7You have recieved (item)!" to player
+		if {_welcomebtime} is false:
+			send "&cNo one has joined yet!" to player
+		if {_welcomebtime} is not set:
+			send "&cNo one has joined yet!" to player
